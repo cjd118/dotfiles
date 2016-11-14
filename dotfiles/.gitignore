@@ -1,0 +1,13 @@
+#cache
+*.cache
+
+# logs
+*.log 
+
+# os
+.DS_Store
+*~
+
+# VCS folders
+.hg
+.svn

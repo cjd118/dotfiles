@@ -1,0 +1,16 @@
+[user]
+	email = cjdisme@gmail.com
+	name = Chris Davis
+[color]
+	ui = auto
+[alias]
+	l = log --oneline --graph
+	d = diff
+	dc = diff --cached
+	st = status .
+	c = commit
+	ca = commit -a
+	cm = commit -m
+	a = add
+[core]
+	editor = vim
