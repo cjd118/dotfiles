@@ -5,12 +5,13 @@
 	ui = auto
 [alias]
 	l = log --oneline --graph
-	d = diff
+	d = diff .
 	dc = diff --cached
-	st = status .
+	s = status .
 	c = commit
 	ca = commit -a
 	cm = commit -m
 	a = add
+	aa = add -A
 [core]
 	editor = vim

@@ -1,10 +1,19 @@
-#parse git branch
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+
+get_git_prompt() {
+
+    branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/')
+
+    if [[ $branch ]]; then
+        changes=''
+        if [[ -n "$(git status --porcelain)" ]]; then
+            changes='+'
+        fi
+        printf "%s %s" "$branch" "$changes"
+    fi
+
 }
 
 # default (coloured) bash prompt
 #PS1='$\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
-PS1='\u@\h: \[\e[32m\]\w\[\e[m\]\[\e[33m\]$(parse_git_branch)\[\e[m\]\n\$ '
-
+PS1='\u@\h: \[\e[32m\]\w\[\e[m\]\[\e[33m\]$(get_git_prompt)\[\e[m\]\n\$ '
