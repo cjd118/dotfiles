@@ -44,3 +44,5 @@ autocmd vimenter * NERDTree
 "ctrpl
 set runtimepath^=~/.vim/bundle/ctrlp
 let g:ctrlp_show_hidden=1
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=30
