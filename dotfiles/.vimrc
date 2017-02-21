@@ -27,6 +27,12 @@ filetype on
 filetype plugin on
 filetype indent on
 
+"tabs to spaces
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 "theme
 set background=dark
 let g:solarized_termcolors=256
