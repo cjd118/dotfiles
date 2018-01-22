@@ -9,6 +9,8 @@ alias .....='cd ../../../../'
 alias ls='ls --color=auto'
 alias lsa='ls -lah --color=auto'
 
+#typos
+alias gti=git
 
 #misc
 alias grep='grep --color=auto'
